@@ -22,12 +22,12 @@ const Comment = ({ comment, setComments }) => {
       console.log(error)
     }
   }
-
+console.log(user?.profileImage);
   return (
     <div className={classes.container}>
       <div className={classes.wrapper}>
         <div className={classes.left}>
-          <img src={comment?.author?.profileImg ? `http://localhost:5000/images/${comment?.author?.profileImg}` : person}/>
+          <img src={comment?.author?.profileImg ? `http://localhost:4000/images/${comment?.author?.profileImg}` : person}/>
           <div className={classes.userData}>
             <h4>{comment?.author?.username}</h4>
             <span className={classes.timeago}>{format(comment?.createdAt)}</span>

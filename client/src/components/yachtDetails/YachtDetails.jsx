@@ -38,7 +38,7 @@ const YachtDetails = () => {
             }
         }
         fetchYachtDetails()
-    }, [id])
+    }, [user._id])
 
     useEffect(() => {
         const fetchComments = async () => {
@@ -50,7 +50,7 @@ const YachtDetails = () => {
             }
         }
         fetchComments()
-    }, [id])
+    }, [user._id])
 
 
     const handleCloseForm = () => {
@@ -126,7 +126,7 @@ const YachtDetails = () => {
             <h3 style={{ textAlign: 'center', marginBottom: '2.5rem', fontSize: '32px', marginTop: '-2.5rem' }}>Yacht Details</h3>
             <div className={classes.wrapper}>
                 <div className={classes.left}>
-                    <img src={`http://localhost:5000/images/${yacht?.img}`} />
+                    <img src={`http://localhost:5000/images/${yacht?.img}` } alt={` `} />
                 </div>
                 <div className={classes.right}>
                     <div className={classes.top}>
@@ -191,7 +191,7 @@ const YachtDetails = () => {
             {user?._id != null && <div className={classes.commentSection}>
                 {/* comment input */}
                 <div className={classes.commentInput}>
-                    <img src={`http://localhost:5000/images/${user?.profileImg}`} />
+                    <img src={`http://localhost:4000/images/${user?.profileImg}`} />
                     <input value={commentText} type="text" placeholder='Type message...' onChange={(e) => setCommentText(e.target.value)} />
                     <button onClick={handleComment}>Post</button>
                 </div>

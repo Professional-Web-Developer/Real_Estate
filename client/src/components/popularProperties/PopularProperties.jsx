@@ -29,7 +29,7 @@ const PopularProperties = () => {
   }, [])
 
   return (
-    <div className={classes.container}>
+    <div className={classes.container} id='Popular_Properties'>
       <div className={classes.wrapper}>
         <div className={classes.titles}>
           <h5>Different types of properties</h5>

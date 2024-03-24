@@ -2,6 +2,7 @@
 import classes from './navbar.module.css'
 import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
+import {Link as ScrollLink} from 'react-scroll'
 import { Link, useNavigate } from 'react-router-dom'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { AiOutlineClose, AiOutlineFileImage } from 'react-icons/ai'
@@ -115,17 +116,18 @@ const Navbar = () => {
           Real Estate <BsHouseDoor />
         </Link>
         <ul className={classes.center}>
-          <li onClick={scrollToTop} className={classes.listItem}>
+          <li onClick={()=>navigate('/')  } className={classes.listItem} >
             Home
           </li>
           <li className={classes.listItem}>
-            About
+          <ScrollLink to='footer' smooth={true} duration={500}>About</ScrollLink>
+            
+          </li>
+          <li className={classes.listItem } >
+          <ScrollLink to='Popular_Properties' smooth={true} duration={500}>Popular Properties</ScrollLink>
           </li>
           <li className={classes.listItem}>
-            Featured
-          </li>
-          <li className={classes.listItem}>
-            Contacts
+          <ScrollLink to='contacts' smooth={true} duration={500}>Contacts</ScrollLink>
           </li>
         </ul>
         <div className={classes.right}>
@@ -204,7 +206,7 @@ const Navbar = () => {
               </Link>
               <AiOutlineClose className={classes.mobileCloseIcon} onClick={() => setShowMobileNav(false)} />
               <ul className={classes.center}>
-                <li onClick={scrollToTop} className={classes.listItem}>
+                <li onClick={scrollToTop} className={classes.listItem} >
                   Home
                 </li>
                 <li className={classes.listItem}>

@@ -47,6 +47,11 @@ const PropertySchema = new mongoose.Schema({
         type: [String],
         default: []
     }
+    ,
+    featured:{
+        type:Boolean,
+        default:true
+    }
 }, {timestamps: true})
 
 module.exports = mongoose.model("Property", PropertySchema)

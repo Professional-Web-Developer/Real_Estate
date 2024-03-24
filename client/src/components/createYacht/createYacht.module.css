@@ -1,4 +1,4 @@
-.container{
+/* .container{
     height: calc(100vh - 60px);
     width: 100%;
     margin-top: 5rem;
@@ -70,4 +70,115 @@ form .inputBoxImage label{
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
+
+
+
+
+/* CreateYacht.module.css */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f8fa; /* Lighter pastel background */
+  }
+  
+  .wrapper {
+    width: 450px; /* Adjusted width for medium size */
+    background-color: #fff; /* White background for the form */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 1rem;
+  }
+  
+  .wrapper h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 20px; /* Smaller font size for heading */
+    font-weight: bold;
+    color: #666; /* Lighter color for heading text */
+  }
+  
+  .inputBox {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Spacing between label and input */
+  }
+  
+  .inputBox label {
+    width: 100px; /* Adjusted label width for medium size */
+    text-align: right;
+    font-size: 14px;
+    color: #999; /* Lighter text color for labels */
+  }
+  
+  .inputBox input,
+  .inputBoxImage input[type="file"] {
+    width: 100%; /* Full-width inputs */
+    padding: 0.5rem 0.5rem;
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 6px; /* More rounded corners for cuteness */
+    font-size: 12px;
+    outline: none; /* Remove default outline */
+  }
+  
+  .inputBox input:focus,
+  .inputBoxImage input[type="file"]:focus {
+    border-color: #f0ad4e; /* Lighter orange border on focus */
+  }
+  
+  .inputBoxImage label {
+    display: flex;
+    justify-content: space-between; /* Align label elements */
+  }
+  
+  .inputBoxImage .AiFillFileImage {
+    font-size: 18px; /* Smaller icon size for cuteness */
+    cursor: pointer;
+    color: #f0ad4e; /* Lighter orange icon color */
+  }
+  
+  .error {
+    margin-top: 1rem;
+    padding: 1rem 1.5rem;
+    border-radius: 8px; /* More rounded corners for error messages */
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    font-size: 14px; /* Smaller font size for error messages */
+  }
+  
+  .error.emptyFields {
+    background-color: #f0ad4e; /* Lighter orange for empty fields error */
+  }
+  
+  .error.createError {
+    background-color: #f00; /* Red for creation error */
+  }
+  
+  button[type="submit"] {
+    background-color: #f0ad4e; /* Lighter orange for submit button */
+    color: #fff;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px; /* More rounded corners for cuteness */
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #d78b3c; /* Darker orange on hover */
+  }
+  
+  /* Optional: Image Preview (if applicable) */
+  .imagePreview {
+    width: 80px;
+    height: 80px;
+    object-fit: cover; /* Maintain aspect ratio and crop */
+    border-radius: 50%; /* Circular image preview for cuteness */
+    margin-top: 12px;
+  }
+  
