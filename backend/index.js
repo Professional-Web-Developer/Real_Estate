@@ -12,7 +12,7 @@ const commentController = require("./controllers/commentController");
 
 // db connecting
 mongoose.set('strictQuery', false)
-mongoose.connect(process.env.MONGO_URL);
+mongoose.connect("mongodb+srv:kavin:Kavin369@cluster0.vz2uykd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0");
 app.use('/images', express.static('public/images'))
 
 // middlewares
